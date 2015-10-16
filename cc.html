@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+    xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>双击编辑可修改状态的JS实现</title>
+        <meta http-equiv="content-type" content="text/html;charset=gb2312">
+            <style type="text/css">
+        .tooltip {
+            position: absolute;
+            z-index: 10
+        }
+        .tooltip_inner {
+            padding: 0 10px;
+            font-size: 12px;
+            line-height: 20px;
+            color: #fff;
+            background-color: #555556;
+            word-wrap: break-word;
+            word-break: break-all
+        }
+        .tooltip_arrow {
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            margin-left: -6px;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-width: 6px;
+            border-style: dashed;
+            border-color: transparent;
+            border-bottom-width: 0;
+            border-top-color: #555556;
+            border-top-style: solid
+        }
+        @font-face {
+            font-family: SYHT;
+            src: url(http://www2.res.meizu.com/zh_cn/fonts/SHSCN-ELight.eot?v=150129);
+            src: local('1'), url(http://www2.res.meizu.com/zh_cn/fonts/SHSCN-ELight.woff?v=150129) format('woff'), url(http://www2.res.meizu.com/zh_cn/fonts/SHSCN-ELight.ttf?v=150129) format('truetype'), url(http://www2.res.meizu.com/zh_cn/fonts/SHSCN-ELight.svg?v=150129) format('svg');
+            font-weight: 400;
+            font-style: normal
+        }
+        h1 {
+            font: 62px/1.5 SYHT, '微软雅黑', '宋体', tahoma, Srial, helvetica, sans-serif;
+        }
+    </style>
+            <script type="text/javascript">
+        function ShowElement(element) {
+            var oldhtml = element.innerHTML;
+            var newobj = document.createElement('input'); //创建新的input元素
+            newobj.type = 'text'; //为新增元素添加类型
+            newobj.onblur = function() {
+                element.innerHTML = this.value ? this.value : oldhtml; //当触发时判断新增元素值是否为空，为空则不修改，并返回原有值 
+            }
+            element.innerHTML = '';
+            element.appendChild(newobj);
+            newobj.focus();
+        }
+    </script>
+        </head>
+        <body>
+            <h1>Z5是nubia的首款产品
+nubia（努比亚）在品牌发布会上宣布了努比亚首款手机即Z5，并表示它由意大利设计师乔凡诺尼设计，至于该机的配置参数，官方只透露其配备的是5寸触摸屏和四核处理器，并内置有1300万摄像头。 [2] 
+2012年11月9日，nubia Z5的侧面谍照曝光，从照片上来看，nubia Z5的机身要比iPhone 5还要薄上一些，因此机身厚度绝对不会超过7.6毫米。[3] 
+2012年11月14日，nubia Z5的屏幕显示效果谍照曝光，nubia品牌总经理倪飞通过微博透露了一张nubia Z5对比三星GALAXY S3及苹果iPhone 4S的屏幕显示效果照片。结合发布会信息，nubia Z5采用了5.0英寸1080p(1920×1080)分辨率屏幕的nubia Z5，每英寸所拥有的像素数目(ppi)达到了440，超过了GALAXY S3的306及iPhone 4S的326。而从曝光的对比图中我们也能明显看到，nubia Z5在屏幕局部细节显示上要比三星GALAXY S3及iPhone 4S细腻不少，尤其是在还原植物边缘白色毛边时，nubia Z5能够表现出更多的细节。　[4] 
+2.67mm超窄边框
+很快nubia就要推出他们首款机型Z5（据说是12月26日），而大家对于这款5寸1080p四核手机也是相当期待。
+据悉，nubia Z5采用了一体成型机身（铝合金金属边框），厚度在8mm以下，并配有手工打磨的金属按键。
+从之前的消息来看，Z5配备的是5寸1080p屏，搭载1.5GHz的高通APQ8064四核处理器，同时内置2GB RAM和1300万像素摄像头（与OPPO Find 5保持一致），运行的是Android 4.1系统，电池容量可能是2300mAh。
+此外，除了上述卖点外，消息人士爆料称，Z5还有一个吸引人的地方，那就是全网通，即兼容GSM/WCDMA/CDMA2000制式全网络。
+最后咱们来说说该机的售价和上市时间。1月上市，售价3456元。支持钛版本的定制！价格7890元，二个版本一月同步发售！
+nubia Z5首次引入专业级单反功能
+nubia Z5首次引入了专业级单反功能“独立测光与独立对焦”，该越界功能使得nubia Z5的拍照功能受到追捧。nubia Z5高达1300万的高像素，使得远景表现能力突出。而能自行调节对焦点和测光点，在取景方面上比较灵活，方便拍摄。即便是工程样机，nubia Z5各方面都表现相当不错，包括HDR的表现效果也非常不错，夜景控制噪点的能力也非常棒。
+nubia Z5拥有全网通功能
+nubia Z5号称支持GSM/CDMA2000/WCDMA（国内三大运营商制式全部涵盖），国际版本还支持LTE！这在同类手机中首先实现此功能。
+nubia Z5的主要规格
+Z5主要规格：1080p屏/高通8064处理器/2G内存/窄边框/1300万像素摄像头。价格3456元，可使用最多500元优惠券抵。
+nubia Z5相关媒体评测
+在12月26号的产品发布会之后，主流IT媒体得到了官方提供的工程机，同时发布了一些测评文章，消费者普遍对该手机型号有较高的期待。部分测评文章如下：
+驱动之家，5.0寸四核新旗舰：超窄边框nubia Z5评测
+手机中国，四核/FHD炫屏/超窄边框 nubia Z5评测
+PConline，开启FHD时代!1080p四核旗舰安卓手机横评
+爱搞机，独特的摄影魅力 Nubia Z5拍摄样张评测</h1>
+            <dl>
+                <dt>你的用户名:</dt>
+                <dd ondblclick="ShowElement(this)">三人行团队</dd>
+                <dt>你的个性档</dt>
+                <dd ondblclick="ShowElement(this)">我闪故我在</dd>
+            </dl>
+    @font-face
+    
+            
+            
+            
+            <div class="tooltip">
+                <div class="tooltip_inner">123</div>
+                <div class="tooltip_arrow"></div>
+            </div>
+        </body>
+    </html>
